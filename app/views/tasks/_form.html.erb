@@ -1,0 +1,13 @@
+<%= form_for(task, url: url) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+
+    <%= f.label :details %>
+    <%= f.text_field :details %><br>
+
+    <% if should_show_boolean %>
+        <%= f.check_box :completed %><br>
+    <% end %>
+
+    <%= f.submit %>
+<% end %>
