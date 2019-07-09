@@ -1,2 +1,3 @@
 <h1>Edit task</h1>
 <%= render partial: 'tasks/form', locals: { task: @task, url: submit_edited_task_path(@task.id), should_show_boolean: true } %>
+<%= link_to 'back', tasks_path, class: 'btn btn-grey' %>

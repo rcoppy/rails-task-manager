@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 
   get 'tasks/remove/:id', to: 'tasks#remove', as: 'remove_task' 
   
+  get 'tasks/toggle-complete/:id', to: 'tasks#toggle_completed', as: 'toggle_completed_task'
+
   get 'tasks/:id', to: 'tasks#show', as: 'task'
 end

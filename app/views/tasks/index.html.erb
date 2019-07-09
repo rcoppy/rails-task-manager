@@ -2,14 +2,22 @@
     <h1>Tasks</h1>
 </div>
 
-<div class="container">
+<div id="index-content" class="container">
     <ul id="tasks-list">
         <% @tasks.each do |task| %>
             <li class="<%= task.completed ? 'completed' : 'pending' %>">
-                <i class="<%= task.completed ? 'fa fa-check-square-o' : 'fa fa-square-o' %>"></i>
+                <%= link_to toggle_completed_task_path(task.id), title: "toggle complete" do %>
+                    <i class="<%= task.completed ? 'fa fa-check-square-o' : 'fa fa-square-o' %>"></i>
+                <% end %>
                 <%= link_to task.title, task_path(task.id) %>
             </li>
         <% end %>
     </ul>
-    <%= link_to 'add task', new_task_path, class: "btn btn-blue" %>
+    
+</div>
+
+<div class="footer">
+    <div class="container">
+        <%= link_to 'add task', new_task_path, class: "btn btn-blue" %>
+    </div>
 </div>

@@ -25,6 +25,13 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def toggle_completed
+    task = Task.find(params[:id])
+    task.completed = !task.completed
+    task.save
+    redirect_to tasks_path
+  end
+
   def remove
     Task.delete(params[:id])
     redirect_to tasks_path
