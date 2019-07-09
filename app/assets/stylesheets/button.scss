@@ -1,0 +1,52 @@
+$color-blue: rgb(34, 141, 173);
+$color-red: rgb(204, 40, 40);
+$color-grey: rgb(114, 114, 114);
+$percentage-darken: 20%;
+$percentage-lighten: 40%;
+
+.btn {
+
+    color: white;
+    border-radius: 7px;
+    display: inline-block;
+    padding: 12px 16px;
+    border-width: 6px;
+    border-style: solid;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        color: darken(#fff, $percentage-darken);
+        border-color: darken(#fff, $percentage-darken);
+    }
+
+    &.btn-blue {
+        background-color: $color-blue;
+        border-color: darken($color-blue, $percentage-darken);
+
+        &:hover {
+            background-color: darken($color-blue, $percentage-darken);
+            border-color: darken(#fff, $percentage-darken);
+        }
+    }
+
+    &.btn-red {
+        background-color: $color-red;
+        border-color: darken($color-red, $percentage-darken);
+
+        &:hover {
+            background-color: darken($color-red, $percentage-darken);
+            border-color: darken(#fff, $percentage-darken);
+        }
+    }
+
+    &.btn-grey {
+        background-color: $color-grey;
+        border-color: darken($color-grey, $percentage-darken);
+
+        &:hover {
+            background-color: darken($color-grey, $percentage-darken);
+            border-color: darken(#fff, $percentage-darken);
+        }
+    }
+}
