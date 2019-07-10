@@ -1,3 +1,11 @@
-<h1>Edit task</h1>
-<%= render partial: 'tasks/form', locals: { task: @task, url: submit_edited_task_path(@task.id), should_show_boolean: true } %>
-<%= link_to 'back', tasks_path, class: 'btn btn-grey' %>
+<div class="banenr">
+    <h1>Edit task</h1>
+</div>
+
+<div id="index-content" class="container">
+    <%= render partial: 'tasks/form', locals: { task: @task, url: submit_edited_task_path(@task.id), should_show_boolean: true } %>
+</div>
+
+<div class="footer">
+    <%= link_to 'back', tasks_path, class: 'btn btn-grey' %>
+</div>

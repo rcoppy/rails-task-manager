@@ -1,3 +1,7 @@
-<h1>Add task</h1>
+<div class="banner">
+    <h1>Add task</h1>
+</div>
+
+
 <%= render partial: 'tasks/form', locals: { task: @task, url: submit_new_task_path, should_show_boolean: false } %>
 <%= link_to 'back', tasks_path, class: 'btn btn-grey' %>
